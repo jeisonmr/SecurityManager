@@ -1,0 +1,67 @@
+@theme {
+  --spacing: 10px;
+
+  --spacing-center-desktop: 120px;
+  --spacing-center-movil: 20px;
+ 
+  --color-theme-black: #000000;
+  --color-theme-white: #FFFFFF;
+
+  --color-white: #EEF3F6;
+  --color-white_50: #EEF3F6FF;
+  
+  --color-green: #A9F34D;
+  --color-green-40: #A9F34D40;
+  --color-green-50: #49633250;
+  --color-green-80: #49633280;
+  
+  
+  --color-black: #0D151BFF;
+  --color-black-90: #1B2A22FF;
+  --color-black-80: #0A1016FF;
+  --color-black-70: #0C1319FF;
+  --color-black-60: #12191FFF;
+  --color-black-50: #1A2622FF;
+
+  --color-gray: #35424B;
+  --color-gray-95: #2A3740FF;
+  --color-gray-90: #26323AFF;
+  --color-gray-80: #94A8B8FF;
+  --color-gray-70: #718493FF;
+  --color-gray-62: #2A374062;
+  --color-gray-38: #26333B38;
+  
+
+  --breakpoint-movil: 320px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-sm: 1024px;
+  --breakpoint-md: 1280px;
+  --breakpoint-lg: 1440px;
+  --breakpoint-xl: 1920px;
+
+  --font-primary-300: 'primary-300';
+  --font-primary-600: 'primary-600';
+  --font-primary-900: 'primary-900';
+  --font-secondary-300: 'secondary-300';
+  --font-secondary-600: 'secondary-600';
+
+  --text-txt-title1: clamp(3.4rem, 3.5vw, 3.6rem);
+  --text-txt-title2: clamp(1.6rem, 1.7vw, 1.8rem);
+  --text-txt-title3: clamp(1.2rem, 1.3vw, 1.4rem);
+  --text-txt-title4: clamp(1rem, 1.1vw, 1.2rem);
+  --text-txt-description1: clamp(0.8rem, 0.9vw, 1rem);
+  
+  --line-height-title1: clamp(3.4rem, 3.5vw, 3.6rem);
+  --line-height-title2: clamp(1.6rem, 1.7vw, 1.8rem);
+  --line-height-title3: clamp(1.2rem, 1.3vw, 1.4rem);
+  --line-height-title4: clamp(1rem, 1.1vw, 1.2rem);
+  --line-height-description1: clamp(0.8rem, 0.9vw, 1rem);
+
+  --radius-xs: 0.5rem;
+  --radius-sm: 1rem;
+  --radius-md: 1.5rem;
+  --radius-lg: 2rem;
+  --radius-xl: 2.5rem;
+  --radius-full: 100%;
+}
