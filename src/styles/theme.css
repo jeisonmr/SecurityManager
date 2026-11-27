@@ -8,12 +8,14 @@
   --color-theme-white: #FFFFFF;
 
   --color-white: #EEF3F6;
-  --color-white_50: #EEF3F6FF;
+  --color-white-50: #EEF3F6FF;
   
   --color-green: #A9F34D;
   --color-green-40: #A9F34D40;
   --color-green-50: #49633250;
   --color-green-80: #49633280;
+  --color-green-dark: #1A2E15;
+  --color-green-medium: #2D4A26;
   
   
   --color-black: #0D151BFF;

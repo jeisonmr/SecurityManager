@@ -26,28 +26,13 @@ html{
     line-height: var(--line-height-title3);
   }
 
+  .text-txt-title4 {
+    font-size: var(--text-txt-title4);
+    line-height: var(--line-height-title4);
+  }
+
   .text-txt-description1 {
     font-size: var(--text-txt-description1);
     line-height: var(--line-height-description1);
-  }
-
-  .text-txt-description2 {
-    font-size: var(--text-txt-description2);
-    line-height: var(--line-height-description2);
-  }
-
-  .text-txt-description3 {
-    font-size: var(--text-txt-description3);
-    line-height: var(--line-height-description3);
-  }
-
-  .text-txt-description4 {
-    font-size: var(--text-txt-description4);
-    line-height: var(--line-height-description4);
-  }
-
-  .text-txt-description5 {
-    font-size: var(--text-txt-description5);
-    line-height: var(--line-height-description5);
   }
 }
