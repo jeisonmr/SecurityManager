@@ -1,0 +1,38 @@
+html{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-size: 62.4%;
+  line-height: 1.5rem;
+
+  scroll-behavior: smooth;
+
+  @apply bg-black text-white;
+
+/* Font-size y Line-height personalizado para las fuentes. */
+  .text-txt-title1 {
+    font-size: var(--text-txt-title1);
+    line-height: var(--line-height-title1);
+  }
+
+  .text-txt-title2 {
+    font-size: var(--text-txt-title2);
+    line-height: var(--line-height-title2);
+  }
+
+  .text-txt-title3 {
+    font-size: var(--text-txt-title3);
+    line-height: var(--line-height-title3);
+  }
+
+  .text-txt-title4 {
+    font-size: var(--text-txt-title4);
+    line-height: var(--line-height-title4);
+  }
+
+  .text-txt-description1 {
+    font-size: var(--text-txt-description1);
+    line-height: var(--line-height-description1);
+  }
+}
