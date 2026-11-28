@@ -36,7 +36,7 @@ const Menu = ({ menuItems }: MenuItemProps): ReactElement => {
     <ul className="Menu flex flex-col gap-1 w-full h-auto">
       {menuItems?.map((item, index) => {
         const subMenuItems = item.subMenuItems ?? [];
-        const hasSubMenu = subMenuItems.length > 0;
+        const hasSubMenu = subMenuItems.length > 1;
         const key = item.hrefMenu ?? item.labelMenu ?? String(index);
         const isOpen = openKey === key;
         const isActive =
@@ -45,7 +45,6 @@ const Menu = ({ menuItems }: MenuItemProps): ReactElement => {
             subMenuItems.some(
               (subItem) => subItem.isActiveSubmenu ?? (subItem.hrefSubmenu === pathname),
             ));
-        const icon = isActive ? (item.iconActiveMenu ?? item.iconMenu) : item.iconMenu;
 
         return (
           <li key={key} className="w-full">
@@ -53,13 +52,19 @@ const Menu = ({ menuItems }: MenuItemProps): ReactElement => {
               <details className="w-full" open={isOpen}>
                 <summary
                   onClick={(event) => handleSummaryClick(event, key)}
-                  className={`flex cursor-pointer list-none items-center gap-1 rounded-sm px-1 py-1 duration-300 hover:bg-gray-38 [&::-webkit-details-marker]:hidden ${
+                  className={`flex cursor-pointer list-none items-center gap-1 rounded-sm px-1 py-1 duration-300 hover:bg-black-70
+                    ${
                     isActive
-                      ? 'border-l-2 border-green bg-green-dark text-white'
+                      ? 'bg-black-40 text-white'
                       : 'text-gray-80 hover:text-white'
-                  }`}
+                  }
+                  ${isOpen ? 'bg-black-70 text-white' : ''}`}
                 >
-                  {icon && <img className="h-3 w-3" src={icon} alt="" />}
+                  <div>
+                    <div 
+                      className={`h-2 w-2 stroke-gray-80 hover:text-white ${isActive ? 'text-green' : ''}`}
+                      dangerouslySetInnerHTML={{ __html: item.iconMenu || '' }} />
+                  </div>
                   <span className="text-txt-title3 font-primary-600">{item.labelMenu}</span>
                   <svg
                     className={`Menu-chevron ml-auto h-2 w-2 transition-transform duration-300 ${
@@ -79,25 +84,22 @@ const Menu = ({ menuItems }: MenuItemProps): ReactElement => {
                   </svg>
                 </summary>
 
-                <ul className="ml-3 mt-1 flex flex-col gap-1 border-l border-green pl-3">
+                <ul className="ml-3 mt-1 flex flex-col gap-1 border-l border-gray-95 pl-3">
                   {subMenuItems.map((subItem, subIndex) => {
                     const isSubItemActive =
                       subItem.isActiveSubmenu ?? (subItem.hrefSubmenu === pathname);
-                    const subIcon = isSubItemActive
-                      ? (subItem.iconActiveSubmenu ?? subItem.iconSubmenu)
-                      : subItem.iconSubmenu;
 
                     return (
                       <li key={subItem.hrefSubmenu ?? subItem.labelSubmenu ?? subIndex}>
                         <Link
-                          to={subItem.hrefSubmenu}
-                          className={`flex items-center gap-1 rounded-sm px-1 py-1 duration-300 ${
+                          to={subItem.hrefSubmenu || ''}
+                          className={`flex items-center gap-1 rounded-sm px-1 py-1 duration-300 focus:outline-none
+                          ${
                             isSubItemActive
-                              ? 'bg-green-medium text-white'
-                              : 'text-gray-80 hover:bg-green-medium hover:text-white'
+                              ? 'bg-green-40 text-green before:content-[""] before:absolute before:left-4.5 before:w-[0.1rem] before:h-2 before:bg-green'
+                              : 'text-gray-80 hover:bg-black-40 hover:text-white'
                           }`}
                         >
-                          {subIcon && <img className="h-2.5 w-2.5" src={subIcon} alt="" />}
                           <span className="text-txt-title4 font-primary-600">
                             {subItem.labelSubmenu}
                           </span>
@@ -109,14 +111,14 @@ const Menu = ({ menuItems }: MenuItemProps): ReactElement => {
               </details>
             ) : (
               <Link
-                to={item.hrefMenu}
-                className={`flex items-center gap-1 rounded-sm px-1 py-1 duration-300 ${
+                to={item.hrefMenu || ''}
+                className={`flex items-center gap-1 rounded-sm px-1 py-1 duration-300 relative
+                ${
                   isActive
-                    ? 'bg-green-50 text-green'
-                    : 'text-gray-70 hover:bg-gray-38 hover:text-white-50'
+                    ? 'bg-green-70 text-green-10'
+                    : 'text-gray-70 hover:bg-gray-40 hover:text-white-50'
                 }`}
               >
-                {icon && <img className="h-3 w-3" src={icon} alt="" />}
                 <span className="text-txt-title3 font-primary-600">{item.labelMenu}</span>
               </Link>
             )}
