@@ -4,27 +4,31 @@
   --spacing-center-desktop: 120px;
   --spacing-center-movil: 20px;
  
+  /* Colors */
   --color-theme-black: #000000;
   --color-theme-white: #FFFFFF;
 
   --color-white: #EEF3F6;
   --color-white-50: #EEF3F6FF;
-  
-  --color-green: #A9F34D;
-  --color-green-40: #A9F34D40;
-  --color-green-50: #49633250;
-  --color-green-80: #49633280;
-  --color-green-dark: #1A2E15;
-  --color-green-medium: #2D4A26;
-  
-  
-  --color-black: #0D151BFF;
-  --color-black-90: #1B2A22FF;
-  --color-black-80: #0A1016FF;
-  --color-black-70: #0C1319FF;
-  --color-black-60: #12191FFF;
-  --color-black-50: #1A2622FF;
 
+  /* Greens - higher number = darker */
+  --color-green: #A9F34D;
+  --color-green-20: #A9F34D;
+  --color-green-30: #A9F34D40;
+  --color-green-40: #49633250;
+  --color-green-50: #49633280;
+  --color-green-60: #2D4A26;
+  --color-green-70: #1B2A22FF;
+  --color-green-80: #1A2622FF;
+  --color-green-90: #1A2E15;
+
+  /* Blacks */
+  --color-black: #0D151BFF;
+  --color-black-50: #0A1016FF;
+  --color-black-60: #0C1319;
+  --color-black-70: #12191F;
+
+  /* Grays */
   --color-gray: #35424B;
   --color-gray-95: #2A3740FF;
   --color-gray-90: #26323AFF;
@@ -32,8 +36,8 @@
   --color-gray-70: #718493FF;
   --color-gray-62: #2A374062;
   --color-gray-38: #26333B38;
-  
 
+  /* Breakpoints */
   --breakpoint-movil: 320px;
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;

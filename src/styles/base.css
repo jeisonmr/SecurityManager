@@ -8,7 +8,7 @@ html{
 
   scroll-behavior: smooth;
 
-  @apply bg-black text-white;
+  @apply bg-black-70 text-white;
 
 /* Font-size y Line-height personalizado para las fuentes. */
   .text-txt-title1 {
